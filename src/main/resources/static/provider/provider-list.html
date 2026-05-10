@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Providers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+          background: black;
+        }
+
+        ::-webkit-scrollbar {
+          display: none;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+<!-- 🔥 NAVBAR -->
+<div class="flex justify-between items-center px-6 py-4 bg-black border-b border-gray-800">
+
+    <h1 class="text-red-600 text-xl font-bold">Smart Appointment System 🎬</h1>
+
+    <div class="flex items-center gap-4">
+        <span id="username" class="text-gray-400"></span>
+
+        <button onclick="goHistory()"
+                class="bg-zinc-800 px-3 py-1 rounded hover:bg-zinc-700">
+            My Appointments
+        </button>
+
+        <button onclick="logout()"
+                class="bg-red-600 px-3 py-1 rounded hover:bg-red-700">
+            Logout
+        </button>
+    </div>
+</div>
+
+<!-- 🔥 HEADER -->
+<div class="px-6 py-4">
+    <h2 class="text-3xl font-bold">Explore Services</h2>
+    <p class="text-gray-400">Find the best providers near you</p>
+</div>
+
+<!-- 🔥 FILTER BAR -->
+<div class="px-6 flex gap-4 flex-wrap">
+
+    <input
+            type="text"
+            id="search"
+            placeholder="Search providers..."
+            class="bg-zinc-900 px-4 py-2 rounded outline-none"
+    >
+
+    <select id="filter" onchange="loadProviders()"
+            class="bg-zinc-900 px-4 py-2 rounded">
+        <option value="">All Services</option>
+        <option value="doctor">Doctor</option>
+        <option value="salon">Salon</option>
+        <option value="tutor">Tutor</option>
+        <option value="mechanic">Mechanic</option>
+    </select>
+
+</div>
+
+<!-- 🔥 PROVIDERS GRID -->
+<div id="providerContainer"
+     class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+
+</div>
+
+<!-- 🔥 LOADING -->
+<p id="loading" class="text-center text-gray-400 hidden">Loading...</p>
+
+<script src="provider-list.js"></script>
+
+<script>
+    function goHistory(){
+      window.location.href = "/history.html";
+    }
+</script>
+
+</body>
+</html>

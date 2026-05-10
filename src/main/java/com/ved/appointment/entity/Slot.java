@@ -27,6 +27,6 @@ public class Slot {
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
-    //Available or Booked
-    private String status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 }

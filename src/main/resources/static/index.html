@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Appointment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+          background: black;
+        }
+
+        /* 🔥 HERO BACKGROUND (MULTI SERVICE) */
+        .hero {
+          background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.3)),
+          url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+          background-size: cover;
+          background-position: center;
+          height: 85vh;
+        }
+
+        /* 🔥 SCROLL HIDE */
+        ::-webkit-scrollbar {
+          display: none;
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans">
+
+<!-- 🔥 NAVBAR -->
+<div class="flex justify-between items-center px-6 py-4 bg-black fixed w-full z-50 shadow-lg">
+
+    <h1 class="text-red-600 text-2xl font-bold tracking-wide">
+        Smart Appointment System 🎬
+    </h1>
+
+    <div class="space-x-6">
+        <button onclick="goUser()" class="hover:text-red-500 transition">User</button>
+        <button onclick="goProvider()" class="hover:text-red-500 transition">Provider</button>
+    </div>
+</div>
+
+<!-- 🔥 HERO SECTION -->
+<div class="hero flex flex-col justify-center pl-10">
+
+    <h1 class="text-5xl font-bold text-red-600 leading-tight">
+        Book Any Service Instantly 🚀
+    </h1>
+
+    <p class="mt-4 text-gray-300 text-lg">
+        Doctors • Salon • Tutors • Mechanics • More
+    </p>
+
+    <div class="mt-6">
+        <button onclick="goUser()"
+                class="bg-red-600 px-6 py-3 rounded-lg text-lg hover:scale-105 transition shadow-lg">
+            Get Started
+        </button>
+    </div>
+</div>
+
+<!-- 🔥 SERVICES -->
+<div class="p-8">
+
+    <h2 class="text-2xl mb-6 font-semibold">Our Services</h2>
+
+    <div class="flex gap-6 overflow-x-scroll">
+
+        <div class="min-w-[260px] bg-zinc-900 p-5 rounded-xl hover:scale-105 transition shadow-lg">
+            <h3 class="text-xl font-bold">Doctor</h3>
+            <p class="text-gray-400 mt-2">Book medical appointments instantly</p>
+        </div>
+
+        <div class="min-w-[260px] bg-zinc-900 p-5 rounded-xl hover:scale-105 transition shadow-lg">
+            <h3 class="text-xl font-bold">Salon</h3>
+            <p class="text-gray-400 mt-2">Find best salon services near you</p>
+        </div>
+
+        <div class="min-w-[260px] bg-zinc-900 p-5 rounded-xl hover:scale-105 transition shadow-lg">
+            <h3 class="text-xl font-bold">Tutor</h3>
+            <p class="text-gray-400 mt-2">Book private tutors easily</p>
+        </div>
+
+        <div class="min-w-[260px] bg-zinc-900 p-5 rounded-xl hover:scale-105 transition shadow-lg">
+            <h3 class="text-xl font-bold">Mechanic</h3>
+            <p class="text-gray-400 mt-2">Get vehicle services instantly</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔥 FEATURE SECTION -->
+<div class="p-8 bg-zinc-900">
+
+    <h2 class="text-2xl mb-6 font-semibold">Why Choose Us?</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="p-5 bg-black rounded-xl shadow-lg">
+            <h3 class="font-bold text-lg">⚡ Instant Booking</h3>
+            <p class="text-gray-400 mt-2">Book services in seconds</p>
+        </div>
+
+        <div class="p-5 bg-black rounded-xl shadow-lg">
+            <h3 class="font-bold text-lg">📅 Smart Scheduling</h3>
+            <p class="text-gray-400 mt-2">Choose best available slots</p>
+        </div>
+
+        <div class="p-5 bg-black rounded-xl shadow-lg">
+            <h3 class="font-bold text-lg">🔒 Secure System</h3>
+            <p class="text-gray-400 mt-2">Safe and reliable booking</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- 🔥 ABOUT -->
+<div class="p-8">
+
+    <h2 class="text-2xl mb-4 font-semibold">About System</h2>
+
+    <p class="text-gray-400 max-w-3xl leading-relaxed">
+        Smart Appointment System is a modern platform that allows users to book
+        multiple services like doctors, salons, tutors, and more with a smooth
+        and Netflix-like experience. This system is designed to provide speed,
+        simplicity, and smart scheduling.
+        <br><br>
+        Developed by <b class="text-white">Ved & Harsh</b>.
+    </p>
+</div>
+
+<!-- 🔥 FOOTER -->
+<div class="bg-black text-center p-4 text-gray-500 border-t border-gray-800">
+    © 2026 Smart Appointment System | All Rights Reserved
+</div>
+
+<script>
+    function goUser(){
+      window.location.href = "/user/login.html";
+    }
+
+    function goProvider(){
+      window.location.href = "/provider/provider-login.html";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!-- 🔥 Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: radial-gradient(circle at top, #111, #000);
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen text-white">
+
+<!-- 🔥 GLASS CARD -->
+<div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl w-80 shadow-2xl border border-white/10">
+
+    <h2 class="text-2xl mb-6 text-center font-bold text-red-500">
+        Welcome Back 👋
+    </h2>
+
+    <input id="email" placeholder="Email"
+           class="w-full p-3 mb-3 rounded bg-black/50 outline-none focus:ring-2 focus:ring-red-500">
+
+    <input id="password" type="password" placeholder="Password"
+           class="w-full p-3 mb-4 rounded bg-black/50 outline-none focus:ring-2 focus:ring-red-500">
+
+    <!-- ✅ FIXED BUTTON -->
+    <button id="loginBtn" onclick="login()"
+            class="w-full bg-red-600 py-3 rounded-lg hover:bg-red-700 transition font-semibold">
+        Login
+    </button>
+
+    <p id="message" class="text-center mt-3 text-green-400"></p>
+
+    <p class="text-center mt-5 text-gray-400 text-sm">
+        New user?
+        <a href="user-register.html" class="text-red-500 hover:underline">
+            Register
+        </a>
+    </p>
+
+</div>
+
+<!-- ✅ CORRECT JS PATH -->
+<script src="user.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Provider Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex items-center justify-center h-screen text-white relative">
+
+<!-- 🔥 HOME BUTTON -->
+<button onclick="goHome()"
+        class="absolute top-5 left-5 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white shadow">
+    ⬅ Home
+</button>
+
+<div class="bg-white/10 backdrop-blur-lg p-8 rounded-xl w-80 shadow-lg">
+
+    <h2 class="text-2xl mb-4 text-center font-bold text-red-500">
+        Provider Login 🧑‍⚕️
+    </h2>
+
+    <input id="email" placeholder="Email"
+           class="w-full p-2 mb-3 rounded bg-black/50 outline-none">
+
+    <input id="password" type="password" placeholder="Password"
+           class="w-full p-2 mb-3 rounded bg-black/50 outline-none">
+
+    <button onclick="loginProvider()"
+            class="w-full bg-red-600 py-2 rounded hover:bg-red-700">
+        Login
+    </button>
+
+    <p id="message" class="text-center mt-3"></p>
+
+    <p class="text-center mt-4 text-gray-400">
+        New provider?
+        <a href="provider-register.html" class="text-red-500">Register</a>
+    </p>
+
+</div>
+
+<script src="provider-auth.js"></script>
+
+<!-- 🔥 GO HOME FUNCTION -->
+<script>
+    function goHome(){
+        window.location.href = "/index.html"; // 🔥 change if needed
+    }
+</script>
+
+</body>
+</html>

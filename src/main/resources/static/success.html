@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white flex items-center justify-center h-screen">
+
+<div class="text-center">
+
+    <!-- ✅ ICON -->
+    <div class="text-green-500 text-6xl mb-4 animate-bounce">
+        ✔
+    </div>
+
+    <!-- ✅ TITLE -->
+    <h1 class="text-4xl font-bold text-green-400">
+        Appointment Booked 🎉
+    </h1>
+
+    <!-- ✅ SUBTEXT -->
+    <p class="text-gray-400 mt-3">
+        Your booking was successful
+    </p>
+
+    <!-- ✅ BUTTONS -->
+    <div class="mt-6 flex gap-4 justify-center">
+
+        <button onclick="goHome()"
+                class="bg-red-600 px-6 py-2 rounded hover:bg-red-700 transition">
+            Go Home
+        </button>
+
+        <button onclick="goHistory()"
+                class="bg-zinc-800 px-6 py-2 rounded hover:bg-zinc-700 transition">
+            My Appointments
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+    function goHome(){
+      window.location.href = "/provider/provider-list.html";
+    }
+
+    function goHistory(){
+      window.location.href = "/history.html";
+    }
+</script>
+
+</body>
+</html>

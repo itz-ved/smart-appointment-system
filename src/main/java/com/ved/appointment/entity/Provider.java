@@ -20,8 +20,12 @@ public class Provider {
     private String experience;
     private String location;
     private double fees;
-    @Column(length = 10,nullable = false)
+    @Column(length = 10,nullable = false,unique = true)
     private String phone;
+    @Column(nullable = false, unique = true)
+    private String email;
+    @Column(nullable = false)
+    private String password;
 
 
 }

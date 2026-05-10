@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+          background: black;
+        }
+
+        .slot {
+          transition: 0.3s;
+        }
+
+        .slot:hover {
+          transform: scale(1.05);
+        }
+
+        .selected {
+          background: #dc2626 !important;
+          color: white;
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+<!-- 🔥 NAVBAR -->
+<div class="flex justify-between items-center px-6 py-4 bg-black border-b border-gray-800">
+    <h1 class="text-red-600 text-xl font-bold">Smart Appointment System 🎬</h1>
+
+    <div>
+        <span id="username" class="text-gray-400"></span>
+        <button onclick="logout()" class="ml-4 bg-red-600 px-3 py-1 rounded">Logout</button>
+    </div>
+</div>
+
+<!-- 🔥 MAIN -->
+<div class="p-6 max-w-4xl mx-auto">
+
+    <h2 class="text-3xl font-bold mb-4">Select Date & Time</h2>
+
+    <!-- DATE -->
+    <input type="date" id="date"
+           class="bg-zinc-900 px-4 py-2 rounded outline-none text-white">
+
+    <button onclick="loadSlots()"
+            class="ml-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
+        Load Slots
+    </button>
+
+    <!-- SLOTS -->
+    <div id="slots" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-6"></div>
+
+    <!-- BOOK BUTTON -->
+    <button id="bookBtn"
+            onclick="book()"
+            class="mt-6 w-full bg-green-600 py-3 rounded text-lg hover:bg-green-700">
+        Confirm Booking
+    </button>
+
+    <p id="message" class="mt-4 text-center font-bold"></p>
+
+</div>
+
+<script src="appointment.js"></script>
+
+</body>
+</html>

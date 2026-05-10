@@ -28,8 +28,8 @@ public class Appointment {
     @OneToOne
     @JoinColumn(name = "slot_id")
     private Slot slot;
-    //Booker/Cancelled/Completed
-    private String Status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
 
 }

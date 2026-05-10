@@ -21,7 +21,6 @@ public class User {
     private String password;
     @Column(length = 10)
     private String phone;
-    private String role;
 
 
 }
