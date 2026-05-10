@@ -228,17 +228,7 @@ mvn spring-boot:run
 
 ---
 
-# 📸 Screenshots
 
-You can add screenshots of:
-
-* Homepage
-* Provider Dashboard
-* Appointment Booking Page
-* Booking History
-* Login & Registration Pages
-
----
 
 # 👨‍💻 Author
 
